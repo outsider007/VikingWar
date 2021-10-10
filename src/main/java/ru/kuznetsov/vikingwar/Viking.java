@@ -8,4 +8,9 @@ import lombok.Data;
 public class Viking {
     private String name;
     private Island currentIsland;
+
+    public void swimToIsland(Island targetIsland) {
+        currentIsland.relocateViking(this);
+        targetIsland.locateViking(this);
+    }
 }
